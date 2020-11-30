@@ -1,0 +1,24 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def main():
+    N=1000
+    a=np.random.random((N,N))
+    b=np.random.random(N)
+    f=plt.subplot()
+    #plt.scatter(a[0],a[1])
+    #plt.scatter(a[0],a[1],s=1,c='gray')
+    for i in range(N):
+        f.scatter(a[0][i],a[1][i],s=7,c='orange',alpha=b[i])
+
+    N=500
+    c=np.random.random((N,N))
+    b=np.random.random(N)
+    for i in range(N):
+        f.scatter(c[0][i],c[1][i],s=10,c='red',alpha=b[i]/10)
+    plt.show()
+
+
+if __name__ == "__main__":
+    main()
